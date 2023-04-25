@@ -17,10 +17,11 @@ with open('users.json', 'r') as file:
 #GET
 @app.route(uriS, methods=['GET'])
 def home():
-    device_eui = ''
-    user = ''
-    password = ''
-    response = get(f'https://sensecap.seeed.cc/view_latest_telemetry_data?device_eui={device_eui}', auth = (user, password)).json()
+    device_eui = '2CF7F1C04350014D'
+    user = 'NAM2OM6AZSLWE733'
+    password = '29F2DB070C804D8BA5D2DB268452BE24517C9789F458452CA199022C3C94EA1A'
+    response = get(f'https://sensecap.seeed.cc/openapi/view_latest_telemetry_data?device_eui={device_eui}', auth = (user, password)).json()
+    print(response)
     return jsonify(data)
 
 #POST
