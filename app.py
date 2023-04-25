@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, abort, request
 import json
+from requests import get
 
 app = Flask(__name__)
 
@@ -16,6 +17,10 @@ with open('users.json', 'r') as file:
 #GET
 @app.route(uriS, methods=['GET'])
 def home():
+    device_eui = ''
+    user = ''
+    password = ''
+    response = get(f'https://sensecap.seeed.cc/view_latest_telemetry_data?device_eui={device_eui}', auth = (user, password)).json()
     return jsonify(data)
 
 #POST
