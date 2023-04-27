@@ -1,8 +1,12 @@
 from flask import Flask, render_template, jsonify, abort, request
+from flask_cors import CORS
 import json
 from requests import get
 
 app = Flask(__name__)
+
+#enable CORS
+CORS(app)
 
 uriS = '/api/sensores'
 uriU = '/api/usuarios'
