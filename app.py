@@ -20,6 +20,10 @@ def save(data):
     with open('data.json', 'w') as file:
         json.dump(data, file)
 
+def saveUsers(data):
+    with open('users.json', 'w') as file:
+        json.dump(data, file)
+
 #HOME----------------------------------------------------------------
 #GET ALL
 @app.route(uriS, methods=['GET'])
@@ -65,6 +69,8 @@ def usuarios():
                     "password": request.json["password"]
                 }
                 users.append(user)
+                saveUsers(users)
+                
                 return jsonify(users)
             else:
                 return abort(404)
