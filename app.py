@@ -35,8 +35,7 @@ def home():
     password = '29F2DB070C804D8BA5D2DB268452BE24517C9789F458452CA199022C3C94EA1A'
     response = get(f'https://sensecap.seeed.cc/openapi/view_latest_telemetry_data?device_eui={device_eui}', auth = (user, password)).json()
     data_dict = {'temperatura': response['data'][0]['points'][0]['measurement_value'], 'humedad': response['data'][0]['points'][1]['measurement_value']}
-    print(data_dict)
-    return jsonify(data)
+    return jsonify(data_dict)
 
 #POST
 @app.route(uriS + '/<int:id>/<float:value>', methods=['POST'])
