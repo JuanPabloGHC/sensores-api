@@ -19,7 +19,7 @@ def openFile():
 
 def save(data):
     with open('data.json', 'w') as file:
-        json.dump(data, file["sensores"])
+        json.dump(data, file)
 
 def saveUsers(data):
     with open('data.json', 'w') as file:
@@ -40,7 +40,7 @@ def home():
     return jsonify(data[0]["sensores"])
 
 #POST
-@app.route(uriS + '/<int:id>/<float:value>', methods=['GET'])
+@app.route(uriS + '/<int:id>/<float:value>', methods=['POST'])
 def add_value(id, value):
     data = openFile()
     #Buscar sensor en el json
@@ -68,6 +68,7 @@ def add_value(id, value):
                     ]
                 }
             )
+        #save(data)
     else:
         abort(404)
     
