@@ -84,7 +84,7 @@ def ultimo_registro(id):
         if this_sensor[0]["inf"]:
             dict = {
                 "name": this_sensor[0]["name"], 
-                "value": this_sensor[0]["inf"][-1]["data"][-1]["values"][-1], 
+                "value": this_sensor[0]["inf"][-1]["data"]["values"][-1], 
                 "suffix": this_sensor[0]["suffix"], 
                 "description": this_sensor[0]["description"]
             }
@@ -106,7 +106,7 @@ def utlima_fecha():
         if this_sensor["inf"]:
             dict = {
                 "date": this_sensor["inf"][-1]["day"], 
-                "time": this_sensor["inf"][-1]["data"][-1]["times"][-1]
+                "time": this_sensor["inf"][-1]["data"]["times"][-1]
             }
             return jsonify(dict)
         else:
