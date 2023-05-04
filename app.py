@@ -83,6 +83,7 @@ def ultimo_registro(id):
     if this_sensor:
         if this_sensor[0]["inf"]:
             dict = {
+                "id": this_sensor[0]["id"], 
                 "name": this_sensor[0]["name"], 
                 "value": this_sensor[0]["inf"][-1]["data"]["values"][-1], 
                 "suffix": this_sensor[0]["suffix"], 
