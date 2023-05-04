@@ -21,10 +21,6 @@ def save(data):
     with open('data.json', 'w') as file:
         json.dump(data, file)
 
-def saveUsers(data):
-    with open('data.json', 'w') as file:
-        json.dump(data, file["users"])
-
 #HOME----------------------------------------------------------------
 #GET ALL
 @app.route(uriS, methods=['GET'])
@@ -47,28 +43,28 @@ def add_value(id, value):
     this_sensor = [sensor for sensor in data[0]["sensores"] if sensor['id'] == id]
     now = datetime.now()
     if this_sensor:
-        currentDate = str(now.day) + "-" + str(now.month)
-        this_date = [date for date in this_sensor[0]["inf"] if date["day"] == currentDate]
+        # currentDate = str(now.day) + "-" + str(now.month)
+        this_date = [date for date in this_sensor[0]["inf"] if date["day"] == str(now)]
         if this_date:
             this_date[0]["data"].append(
                 {
-                    "time": now.minute, 
+                    "time": str(now), 
                     "value": value
                 }
             )
         else:
             this_sensor[0]["inf"].append(
                 {
-                    "day": currentDate,
+                    "day": str(now),
                     "data": [
                         {
-                            "time": now.minute,
+                            "time": str(now),
                             "value": value
                         }
                     ]
                 }
             )
-        #save(data)
+        save(data)
     else:
         abort(404)
     
@@ -104,11 +100,9 @@ def usuarios():
                     "password": request.json["password"]
                 }
                 data[0]["users"].append(user)
+                save(data)
+
                 return jsonify(data[0]["users"])
-                # users.append(user)
-                # saveUsers(users)
-                
-                # return jsonify(users)
             else:
                 return abort(404)
     elif request.method == 'GET':
