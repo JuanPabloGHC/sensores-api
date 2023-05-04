@@ -50,23 +50,19 @@ def add_value(id, value):
         #Para el valor de day del sensor
         currentDate = datetime.date(now)
         this_date = [date for date in this_sensor[0]["inf"] if date["day"] == str(currentDate)]
+
         if this_date:
-            this_date[0]["data"].append(
-                {
-                    "time": str(currentTime), 
-                    "value": value
-                }
-            )
+            this_date[0]["data"]["times"].append(str(currentTime))
+            this_date[0]["data"]["values"].append(value)
+
         else:
             this_sensor[0]["inf"].append(
                 {
                     "day": str(currentDate),
-                    "data": [
-                        {
-                            "time": str(currentTime),
-                            "value": value
-                        }
-                    ]
+                    "data": {
+                        "times": [str(currentTime)],
+                        "values": [value]
+                    } 
                 }
             )
         save(data)
@@ -80,11 +76,19 @@ def add_value(id, value):
 @app.route(uriS + '/<int:id>', methods=['GET'])
 def ultimo_registro(id):
     data = openFile()
+
     #Buscar sensor en el json
     this_sensor = [sensor for sensor in data["sensores"] if sensor['id'] == id]
+
     if this_sensor:
-        dict = {"name": this_sensor[0]["name"], "value": this_sensor[0]["inf"][-1]["data"][-1]["value"], "suffix": this_sensor[0]["suffix"], "description": this_sensor[0]["description"]}
+        dict = {
+            "name": this_sensor[0]["name"], 
+            "value": this_sensor[0]["inf"][-1]["data"][-1]["values"][-1], 
+            "suffix": this_sensor[0]["suffix"], 
+            "description": this_sensor[0]["description"]
+        }
         return jsonify(dict)
+    
     else:
         abort(404)
 
@@ -94,9 +98,14 @@ def utlima_fecha():
     data = openFile()
     #Buscar sensor en el json
     this_sensor = data["sensores"][0]
+
     if this_sensor:
-        dict = {"date": this_sensor["inf"][-1]["day"], "time": this_sensor["inf"][-1]["data"][-1]["time"]}
+        dict = {
+            "date": this_sensor["inf"][-1]["day"], 
+            "time": this_sensor["inf"][-1]["data"][-1]["times"][-1]
+        }
         return jsonify(dict)
+    
     else:
         abort(404)
 

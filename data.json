@@ -30,240 +30,43 @@
             "id": 1,
             "name": "sensor1",
             "description": "Temperatura",
-            "suffix": "°C",
-            "inf": [
-                {
-                    "day": "2023-05-04",
-                    "data": [
-                        {
-                            "time": "2023-05-04 02:10:54.220195+00:00",
-                            "value": 30.51
-                        },
-                        {
-                            "time": "2023-05-04 02:11:19.390972+00:00",
-                            "value": 30.51
-                        },
-                        {
-                            "time": "2023-05-04 02:11:44.250522+00:00",
-                            "value": 30.51
-                        },
-                        {
-                            "time": "02:12:48.125373",
-                            "value": 30.51
-                        },
-                        {
-                            "time": "02:12:53.945942",
-                            "value": 30.51
-                        }
-                    ]
-                }
-            ]
+            "suffix": "\u00c2\u00b0C",
+            "inf": []
         },
         {
             "id": 2,
             "name": "sensor2",
             "description": "Humedad",
             "suffix": "%",
-            "inf": [
-                {
-                    "day": "17 agosto",
-                    "data": [
-                        {
-                            "time": 23,
-                            "value": 17.5
-                        },
-                        {
-                            "time": 25,
-                            "value": 18.5
-                        }
-                    ]
-                },
-                {
-                    "day": "18 agosto",
-                    "data": [
-                        {
-                            "time": 10,
-                            "value": 16.5
-                        },
-                        {
-                            "time": 12,
-                            "value": 17.5
-                        }
-                    ]
-                }
-            ]
+            "inf": []
         },
         {
             "id": 3,
             "name": "sensor3",
             "description": "Ruido",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "17 agosto",
-                    "data": [
-                        {
-                            "time": 23,
-                            "value": 17.5
-                        },
-                        {
-                            "time": 25,
-                            "value": 18.5
-                        }
-                    ]
-                },
-                {
-                    "day": "18 agosto",
-                    "data": [
-                        {
-                            "time": 10,
-                            "value": 16.5
-                        },
-                        {
-                            "time": 12,
-                            "value": 17.5
-                        }
-                    ]
-                }
-            ]
+            "inf": []
         },
         {
             "id": 4,
             "name": "sensor4",
             "description": "Intensidad de Luz",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "17 agosto",
-                    "data": [
-                        {
-                            "time": 23,
-                            "value": 17.5
-                        },
-                        {
-                            "time": 25,
-                            "value": 18.5
-                        }
-                    ]
-                },
-                {
-                    "day": "18 agosto",
-                    "data": [
-                        {
-                            "time": 10,
-                            "value": 16.5
-                        },
-                        {
-                            "time": 12,
-                            "value": 17.5
-                        }
-                    ]
-                },
-                {
-                    "day": "2023-05-03 18:40:54.591612",
-                    "data": [
-                        {
-                            "time": "2023-05-03 18:40:54.591612",
-                            "value": 20.1
-                        }
-                    ]
-                }
-            ]
+            "inf": []
         },
         {
             "id": 5,
             "name": "sensor5",
             "description": "CO2",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "17 agosto",
-                    "data": [
-                        {
-                            "time": 23,
-                            "value": 17.5
-                        },
-                        {
-                            "time": 25,
-                            "value": 18.5
-                        }
-                    ]
-                },
-                {
-                    "day": "18 agosto",
-                    "data": [
-                        {
-                            "time": 10,
-                            "value": 16.5
-                        },
-                        {
-                            "time": 12,
-                            "value": 17.5
-                        }
-                    ]
-                }
-            ]
+            "inf": []
         },
         {
             "id": 6,
             "name": "sensor6",
             "description": "Humedad de Tierra",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "17 agosto",
-                    "data": [
-                        {
-                            "time": 23,
-                            "value": 17.5
-                        },
-                        {
-                            "time": 25,
-                            "value": 18.5
-                        }
-                    ]
-                },
-                {
-                    "day": "18 agosto",
-                    "data": [
-                        {
-                            "time": 10,
-                            "value": 16.5
-                        },
-                        {
-                            "time": 12,
-                            "value": 17.5
-                        }
-                    ]
-                },
-                {
-                    "day": "2023-05-03 18:41:43.166768",
-                    "data": [
-                        {
-                            "time": "2023-05-03 18:41:43.166768",
-                            "value": 22.4
-                        }
-                    ]
-                },
-                {
-                    "day": "2023-05-03 19:50:50.709989",
-                    "data": [
-                        {
-                            "time": "2023-05-03 19:50:50.709989",
-                            "value": 12.3
-                        }
-                    ]
-                },
-                {
-                    "day": "2023-05-04",
-                    "data": [
-                        {
-                            "time": "02:23:12.078443",
-                            "value": 12.5
-                        }
-                    ]
-                }
-            ]
+            "inf": []
         }
     ]
 }
