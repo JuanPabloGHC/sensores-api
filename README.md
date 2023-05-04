@@ -1,6 +1,6 @@
-# API de Monitoreo con sensores ESP32 y SenseCAP
+# API de Monitoreo con sensores ESP32
 
-API desarrollada para monitorear temperatura, humedad y otros datos obtenidos por sensores integrados con ESP32 y SenseCAP Square.
+API desarrollada para monitorear temperatura, humedad y otros datos obtenidos por sensores integrados con ESP32.
 
 # Referencia de la API
 
