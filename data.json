@@ -19,10 +19,6 @@
         {
             "username": "Luis",
             "password": "12345"
-        },
-        {
-            "username": "Huber",
-            "password": "12345"
         }
     ],
     "sensores": [
@@ -31,114 +27,42 @@
             "name": "sensor1",
             "description": "Temperatura",
             "suffix": "\u00c2\u00b0C",
-            "inf": [
-                {
-                    "day": "No day Yet",
-                    "data": {
-                        "times": [
-                            "None"
-                        ],
-                        "values": [
-                            1
-                        ]
-                    }
-                }
-            ]
+            "inf": []
         },
         {
             "id": 2,
             "name": "sensor2",
             "description": "Humedad",
             "suffix": "%",
-            "inf": [
-                {
-                    "day": "No day Yet",
-                    "data": {
-                        "times": [
-                            "None"
-                        ],
-                        "values": [
-                            1
-                        ]
-                    }
-                }
-            ]
+            "inf": []
         },
         {
             "id": 3,
             "name": "sensor3",
             "description": "Ruido",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "No day Yet",
-                    "data": {
-                        "times": [
-                            "None"
-                        ],
-                        "values": [
-                            1
-                        ]
-                    }
-                }
-            ]
+            "inf": []
         },
         {
             "id": 4,
             "name": "sensor4",
             "description": "Intensidad de Luz",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "No day Yet",
-                    "data": {
-                        "times": [
-                            "None"
-                        ],
-                        "values": [
-                            1
-                        ]
-                    }
-                }
-            ]
+            "inf": []
         },
         {
             "id": 5,
             "name": "sensor5",
             "description": "CO2",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "No day Yet",
-                    "data": {
-                        "times": [
-                            "None"
-                        ],
-                        "values": [
-                            1
-                        ]
-                    }
-                }
-            ]
+            "inf": []
         },
         {
             "id": 6,
             "name": "sensor6",
             "description": "Humedad de Tierra",
             "suffix": "",
-            "inf": [
-                {
-                    "day": "No day Yet",
-                    "data": {
-                        "times": [
-                            "None"
-                        ],
-                        "values": [
-                            1
-                        ]
-                    }
-                }
-            ]
+            "inf": []
         }
     ]
 }
