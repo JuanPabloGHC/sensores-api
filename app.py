@@ -22,9 +22,14 @@ def save(data):
         json.dump(data, file)
 
 #HOME----------------------------------------------------------------
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+#SENSORES------------------------------------------------------------
 #GET ALL
 @app.route(uriS, methods=['GET'])
-def home():
+def homeS():
     data = openFile()
 
     # device_eui = '2CF7F1C04350014D'
