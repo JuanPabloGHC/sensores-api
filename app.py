@@ -50,14 +50,14 @@ def add_value(id, value):
     this_sensor = [sensor for sensor in data["sensores"] if sensor['id'] == id]
     #Para el valor de time dentro de un registro
     now = datetime.now(timezone.utc)
-    currentTime = datetime.time(now)
+
     if this_sensor:
         #Para el valor de day del sensor
         currentDate = datetime.date(now)
         this_date = [date for date in this_sensor[0]["inf"] if date["day"] == str(currentDate)]
 
         if this_date:
-            this_date[0]["data"]["times"].append(str(currentTime))
+            this_date[0]["data"]["times"].append(str(now))
             this_date[0]["data"]["values"].append(value)
 
         else:
@@ -65,7 +65,7 @@ def add_value(id, value):
                 {
                     "day": str(currentDate),
                     "data": {
-                        "times": [str(currentTime)],
+                        "times": [str(now)],
                         "values": [value]
                     } 
                 }

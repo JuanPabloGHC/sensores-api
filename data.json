@@ -26,7 +26,7 @@
             "id": 1,
             "name": "sensor1",
             "description": "Temperatura",
-            "suffix": "\u00c2\u00b0C",
+            "suffix": "°C",
             "inf": []
         },
         {
@@ -47,21 +47,21 @@
             "id": 4,
             "name": "sensor4",
             "description": "Intensidad de Luz",
-            "suffix": "",
+            "suffix": "lm",
             "inf": []
         },
         {
             "id": 5,
             "name": "sensor5",
             "description": "CO2",
-            "suffix": "",
+            "suffix": "ppm",
             "inf": []
         },
         {
             "id": 6,
             "name": "sensor6",
             "description": "Humedad de Tierra",
-            "suffix": "",
+            "suffix": "ppb",
             "inf": []
         }
     ]
