@@ -19,10 +19,6 @@
         {
             "username": "Luis",
             "password": "12345"
-        },
-        {
-            "username": "Huber",
-            "password": "12345"
         }
     ],
     "sensores": [
