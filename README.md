@@ -40,7 +40,7 @@ API desarrollada para monitorear temperatura, humedad y otros datos obtenidos po
 
 # API desplegada
 
-- https://task-management-api-0ds8.onrender.com/api/tasks
+- https://api-sensores-redes.onrender.com/
 
 ## Tech Stack
 
