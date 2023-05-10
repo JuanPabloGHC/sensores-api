@@ -26,7 +26,7 @@
             "id": 1,
             "max": 40,
             "min": 15,
-            "name": "sensor1",
+            "name": "DHT11",
             "description": "Temperatura",
             "suffix": "\u00c2\u00b0C",
             "inf": []
@@ -35,7 +35,7 @@
             "id": 2,
             "min": 20,
             "max": 90,
-            "name": "sensor2",
+            "name": "DHT11",
             "description": "Humedad",
             "suffix": "%",
             "inf": []
@@ -44,7 +44,7 @@
             "id": 3,
             "max": 80,
             "min": 30,
-            "name": "sensor3",
+            "name": "KY-038",
             "description": "Viento",
             "suffix": "",
             "inf": []
@@ -53,7 +53,7 @@
             "id": 4,
             "max": 5000,
             "min": 700,
-            "name": "sensor4",
+            "name": "Fotorresistencia",
             "description": "Intensidad de Luz",
             "suffix": "lm",
             "inf": []
@@ -62,7 +62,7 @@
             "id": 5,
             "max": 900,
             "min": 400,
-            "name": "sensor5",
+            "name": "SGP30",
             "description": "CO2",
             "suffix": "ppm",
             "inf": []
@@ -71,7 +71,7 @@
             "id": 6,
             "max": 400,
             "min": 40,
-            "name": "sensor6",
+            "name": "SGP30",
             "description": "Compuestos Orgánicos Volátiles",
             "suffix": "ppb",
             "inf": []

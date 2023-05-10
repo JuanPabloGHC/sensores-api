@@ -81,6 +81,8 @@ def ultimo_registro(id):
             dict = {
                 "id": this_sensor[0]["id"], 
                 "name": this_sensor[0]["name"], 
+                "min" : this_sensor[0]["min"],
+                "min" : this_sensor[0]["max"],
                 "value": this_sensor[0]["inf"][-1]["data"]["values"][-1], 
                 "suffix": this_sensor[0]["suffix"], 
                 "description": this_sensor[0]["description"]
