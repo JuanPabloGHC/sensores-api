@@ -26,7 +26,7 @@
             "id": 1,
             "name": "sensor1",
             "description": "Temperatura",
-            "suffix": "°C",
+            "suffix": "\u00c2\u00b0C",
             "inf": []
         },
         {

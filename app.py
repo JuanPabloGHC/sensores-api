@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, abort, request
 from flask_cors import CORS
 import json
 from requests import get
-from datetime import datetime, date, timezone
+from datetime import datetime, timezone
 
 app = Flask(__name__)
 
@@ -31,15 +31,6 @@ def home():
 @app.route(uriS, methods=['GET'])
 def homeS():
     data = openFile()
-
-    # device_eui = '2CF7F1C04350014D'
-    # user = 'NAM2OM6AZSLWE733'
-    # password = '29F2DB070C804D8BA5D2DB268452BE24517C9789F458452CA199022C3C94EA1A'
-    # response = get(f'https://sensecap.seeed.cc/openapi/view_latest_telemetry_data?device_eui={device_eui}', auth = (user, password)).json()
-    # data_dict = {'temperatura': response['data'][0]['points'][0]['measurement_value'], 'humedad': response['data'][0]['points'][1]['measurement_value']}
-    # print(data_dict)
-    #add_valueS(1, float(response['data'][0]['points'][0]['measurement_value']))
-
     return jsonify(data["sensores"])
 
 #POST
